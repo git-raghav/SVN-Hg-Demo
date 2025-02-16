@@ -1,47 +1,47 @@
-# Mastering Version Control: A Deep Dive into SVN & Mercurial
+# 🚀 Mastering Version Control: A Deep Dive into SVN & Mercurial
 
-**Name:** Raghav
+**💻 Name:** Raghav
 
 ---
 
-## Introduction to Version Control Systems
+## 📌 Introduction to Version Control Systems
 
 Version Control Systems (VCS) are essential for managing software changes, enabling collaboration, and maintaining project history.
 
 ---
 
-## Types of Version Control Systems
+## 📂 Types of Version Control Systems
 
-1. **Centralized (CVCS):** Single central server stores all versions (e.g., **Subversion (SVN)**).
-2. **Distributed (DVCS):** Every user has a full repository copy (e.g., **Mercurial (Hg)**).
-
----
-
-## Why Use Version Control?
-
--   Tracks all changes and keeps a history
--   Supports collaboration among developers
--   Enables rollback to previous versions
--   Facilitates branching/merging for testing
+1. **🔗 Centralized (CVCS):** Single central server stores all versions (e.g., **Subversion (SVN)**).
+2. **🌍 Distributed (DVCS):** Every user has a full repository copy (e.g., **Mercurial (Hg)**).
 
 ---
 
-## Subversion (SVN)
+## ❓ Why Use Version Control?
+
+👉 Tracks all changes and keeps a history
+👉 Supports collaboration among developers
+👉 Enables rollback to previous versions
+👉 Facilitates branching/merging for testing
+
+---
+
+## 🏰 Subversion (SVN)
 
 _A Centralized Version Control System_
 
-### Key Features
+### 🌟 Key Features
 
--   Centralized repository
--   Revision-based tracking (r1, r2, ...)
--   Atomic commits
--   Directory-based branching
+-   📌 Centralized repository
+-   🔄 Revision-based tracking (r1, r2, ...)
+-   ⚡ Atomic commits
+-   🌲 Directory-based branching
 
 ---
 
-### SVN Command Workflow
+### ⚙️ SVN Command Workflow
 
-#### Step 1: Verify Installation
+#### 🛠 Step 1: Verify Installation
 
 ```bash
 svn --version
@@ -49,7 +49,7 @@ svn --version
 
 ![SVN Installation](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image1.png)
 
-#### Step 2: Create Repository & Standard Structure
+#### 📝 Step 2: Create Repository & Standard Structure
 
 ```bash
 svnadmin create C:\Users\ajayr\Raghav-SVN-Repo
@@ -63,7 +63,7 @@ svn import . file:///C:/Users/ajayr/Raghav-SVN-Repo -m "Raghav: Initial structur
 ![SVN Directory Creation](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image2.png)
 ![SVN Directory Creation](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image3.png)
 
-#### Step 3: Checkout Trunk & Add File
+#### ✍️ Step 3: Checkout Trunk & Add File
 
 ```bash
 svn checkout file:///C:/Users/ajayr/Raghav-SVN-Repo/trunk Raghav-SVN-Trunk
@@ -76,7 +76,7 @@ svn commit -m "Raghav: First trunk commit"
 ![SVN Commit](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image4.png)
 ![SVN Commit](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image5.png)
 
-#### Step 4: Branching & Merging
+#### 🔀 Step 4: Branching & Merging
 
 ```bash
 # Create branch
@@ -101,32 +101,32 @@ svn commit -m "Raghav: Merged branch"
 ![SVN Branching & Merging](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image8.png)
 ![SVN Branching & Merging](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image9.png)
 
-### Essential SVN Commands
+### ⚙️ Essential SVN Commands
 
-| Command                        | Description                    |
-| ------------------------------ | ------------------------------ |
-| `svn checkout <repo-url>`      | Get a working copy             |
-| `svn commit -m "Message"`      | Save changes to the repository |
-| `svn merge <branch-url>`       | Merge branches                 |
-| `svn resolve --accept working` | Resolve conflicts              |
+| 🏷 Command                      | 📚 Description          |
+| ------------------------------ | ----------------------- |
+| `svn checkout <repo-url>`      | 🔄 Get a working copy   |
+| `svn commit -m "Message"`      | 💾 Save changes to repo |
+| `svn merge <branch-url>`       | 🔀 Merge branches       |
+| `svn resolve --accept working` | ✅ Resolve conflicts    |
 
 ---
 
-## Mercurial (Hg)
+## 🔄 Mercurial (Hg)
 
 _A Distributed Version Control System_
 
-### Key Features
+### 🌟 Key Features
 
--   Distributed repositories
--   Atomic commits
--   Simple branching/merging
+-   🌍 Distributed repositories
+-   ⚡ Atomic commits
+-   🔀 Simple branching/merging
 
 ---
 
-### Mercurial Command Workflow
+### ⚙️ Mercurial Command Workflow
 
-#### Step 1: Verify Installation
+#### 🛠 Step 1: Verify Installation
 
 ```bash
 hg --version
@@ -134,7 +134,7 @@ hg --version
 
 ![Mercurial Installation](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image10.png)
 
-#### Step 2: Initialize Repository & Commit
+#### 📂 Step 2: Initialize Repository & Commit
 
 ```bash
 cd C:\Users\ajayr
@@ -149,7 +149,7 @@ hg commit -m "Raghav: First commit"
 ![Mercurial Commit](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image11.png)
 ![Mercurial Commit](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image12.png)
 
-#### Step 3: Branching & Merging
+#### 🔀 Step 3: Branching & Merging
 
 ```bash
 # Create branch
@@ -169,32 +169,32 @@ hg commit -m "Raghav: Merged branch"
 ![Mercurial Branching & Merging](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image14.png)
 ![Mercurial Branching & Merging](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image15.png)
 
-### Essential Mercurial Commands
+### ⚙️ Essential Mercurial Commands
 
-| Command                  | Description                |
+| 🏷 Command                | 📚 Description             |
 | ------------------------ | -------------------------- |
-| `hg init`                | Initialize a repository    |
-| `hg commit -m "Message"` | Save changes locally       |
-| `hg merge <branch>`      | Merge branches             |
-| `hg resolve --mark`      | Mark conflicts as resolved |
+| `hg init`                | 🚀 Initialize a repository |
+| `hg commit -m "Message"` | 💾 Save changes locally    |
+| `hg merge <branch>`      | 🔀 Merge branches          |
+| `hg resolve --mark`      | ✅ Mark conflicts resolved |
 
 ---
 
-## SVN vs. Mercurial: Quick Comparison
+## ⚖️ SVN vs. Mercurial: Quick Comparison
 
-| Feature      | SVN                    | Mercurial    |
-| ------------ | ---------------------- | ------------ |
-| Type         | Centralized            | Distributed  |
-| Offline Work | Limited                | Full support |
-| Branching    | Directory-based        | Lightweight  |
-| Performance  | Slower for large repos | Faster       |
+| Feature      | 🏰 SVN                  | 🔄 Mercurial    |
+| ------------ | ----------------------- | --------------- |
+| Type         | 🔗 Centralized          | 🌍 Distributed  |
+| Offline Work | ❌ Limited              | ✅ Full support |
+| Branching    | 📂 Directory-based      | ⚡ Lightweight  |
+| Performance  | 🐢 Slower for big repos | 🚀 Faster       |
 
 ---
 
-## Best Practices
+## 🏆 Best Practices
 
--   Use **SVN** for centralized team workflows.
--   Use **Mercurial** for distributed/offline work.
--   Write clear commit messages (e.g., "Raghav: Fixed login bug").
+👍 Use **SVN** for centralized team workflows.
+👍 Use **Mercurial** for distributed/offline work.
+👍 Write clear commit messages (e.g., `"Raghav: Fixed login bug"`).
 
 ---
