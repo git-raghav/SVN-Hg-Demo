@@ -60,8 +60,8 @@ mkdir trunk branches tags
 svn import . file:///C:/Users/ajayr/Raghav-SVN-Repo -m "Raghav: Initial structure"
 ```
 
-![SVN Directory Creation](/SVN-Hg-Demo/images/image2.png)
-![SVN Directory Creation](/SVN-Hg-Demo/images/image3.png)
+![SVN Directory Creation](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image2.png)
+![SVN Directory Creation](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image3.png)
 
 #### Step 3: Checkout Trunk & Add File
 
@@ -73,8 +73,8 @@ svn add trunk-file.txt
 svn commit -m "Raghav: First trunk commit"
 ```
 
-![SVN Commit](/SVN-Hg-Demo/images/image4.png)
-![SVN Commit](/SVN-Hg-Demo/images/image5.png)
+![SVN Commit](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image4.png)
+![SVN Commit](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image5.png)
 
 #### Step 4: Branching & Merging
 
@@ -96,10 +96,10 @@ svn merge file:///C:/Users/ajayr/Raghav-SVN-Repo/branches/raghav-feature
 svn commit -m "Raghav: Merged branch"
 ```
 
-![SVN Branching & Merging](/SVN-Hg-Demo/images/image6.png)
-![SVN Branching & Merging](/SVN-Hg-Demo/images/image7.png)
-![SVN Branching & Merging](/SVN-Hg-Demo/images/image8.png)
-![SVN Branching & Merging](/SVN-Hg-Demo/images/image9.png)
+![SVN Branching & Merging](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image6.png)
+![SVN Branching & Merging](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image7.png)
+![SVN Branching & Merging](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image8.png)
+![SVN Branching & Merging](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image9.png)
 
 ### Essential SVN Commands
 
@@ -132,7 +132,7 @@ _A Distributed Version Control System_
 hg --version
 ```
 
-![Mercurial Installation](/SVN-Hg-Demo/images/image10.png)
+![Mercurial Installation](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image10.png)
 
 #### Step 2: Initialize Repository & Commit
 
@@ -146,8 +146,8 @@ hg add hg-file.txt
 hg commit -m "Raghav: First commit"
 ```
 
-![Mercurial Commit](/SVN-Hg-Demo/images/image11.png)
-![Mercurial Commit](/SVN-Hg-Demo/images/image12.png)
+![Mercurial Commit](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image11.png)
+![Mercurial Commit](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image12.png)
 
 #### Step 3: Branching & Merging
 
@@ -165,9 +165,9 @@ hg merge raghav-feature
 hg commit -m "Raghav: Merged branch"
 ```
 
-![Mercurial Branching & Merging](/SVN-Hg-Demo/images/image13.png)
-![Mercurial Branching & Merging](/SVN-Hg-Demo/images/image14.png)
-![Mercurial Branching & Merging](/SVN-Hg-Demo/images/image15.png)
+![Mercurial Branching & Merging](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image13.png)
+![Mercurial Branching & Merging](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image14.png)
+![Mercurial Branching & Merging](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image15.png)
 
 ### Essential Mercurial Commands
 
