@@ -1,2 +1,200 @@
-# SVN-Hg-Demo
-A hands-on demonstration of Subversion (SVN) and Mercurial (Hg) with essential commands, explanations, and screenshots. Includes a detailed report hosted via GitHub Pages.
+# Mastering Version Control: A Deep Dive into SVN & Mercurial
+
+**Name:** Raghav
+
+---
+
+## Introduction to Version Control Systems
+
+Version Control Systems (VCS) are essential for managing software changes, enabling collaboration, and maintaining project history.
+
+---
+
+## Types of Version Control Systems
+
+1. **Centralized (CVCS):** Single central server stores all versions (e.g., **Subversion (SVN)**).
+2. **Distributed (DVCS):** Every user has a full repository copy (e.g., **Mercurial (Hg)**).
+
+---
+
+## Why Use Version Control?
+
+-   Tracks all changes and keeps a history
+-   Supports collaboration among developers
+-   Enables rollback to previous versions
+-   Facilitates branching/merging for testing
+
+---
+
+## Subversion (SVN)
+
+_A Centralized Version Control System_
+
+### Key Features
+
+-   Centralized repository
+-   Revision-based tracking (r1, r2, ...)
+-   Atomic commits
+-   Directory-based branching
+
+---
+
+### SVN Command Workflow
+
+#### Step 1: Verify Installation
+
+```bash
+svn --version
+```
+
+![SVN Installation](/SVN-Hg-Demo/images/image1.png)
+
+#### Step 2: Create Repository & Standard Structure
+
+```bash
+svnadmin create C:\Users\ajayr\Raghav-SVN-Repo
+cd C:\Users\ajayr
+mkdir Raghav-SVN-Temp
+cd Raghav-SVN-Temp
+mkdir trunk branches tags
+svn import . file:///C:/Users/ajayr/Raghav-SVN-Repo -m "Raghav: Initial structure"
+```
+
+![SVN Directory Creation](/SVN-Hg-Demo/images/image2.png)
+![SVN Directory Creation](/SVN-Hg-Demo/images/image3.png)
+
+#### Step 3: Checkout Trunk & Add File
+
+```bash
+svn checkout file:///C:/Users/ajayr/Raghav-SVN-Repo/trunk Raghav-SVN-Trunk
+cd Raghav-SVN-Trunk
+echo "Hello from Raghav's SVN trunk!" > trunk-file.txt
+svn add trunk-file.txt
+svn commit -m "Raghav: First trunk commit"
+```
+
+![SVN Commit](/SVN-Hg-Demo/images/image4.png)
+![SVN Commit](/SVN-Hg-Demo/images/image5.png)
+
+#### Step 4: Branching & Merging
+
+```bash
+# Create branch
+svn copy file:///C:/Users/ajayr/Raghav-SVN-Repo/trunk file:///C:/Users/ajayr/Raghav-SVN-Repo/branches/raghav-feature -m "Raghav: Feature branch"
+
+# Switch to branch
+svn switch file:///C:/Users/ajayr/Raghav-SVN-Repo/branches/raghav-feature
+
+# Edit in branch
+echo "Branch work by Raghav" >> branch-file.txt
+svn add branch-file.txt
+svn commit -m "Raghav: Branch commit"
+
+# Merge to trunk
+svn switch file:///C:/Users/ajayr/Raghav-SVN-Repo/trunk
+svn merge file:///C:/Users/ajayr/Raghav-SVN-Repo/branches/raghav-feature
+svn commit -m "Raghav: Merged branch"
+```
+
+![SVN Branching & Merging](/SVN-Hg-Demo/images/image6.png)
+![SVN Branching & Merging](/SVN-Hg-Demo/images/image7.png)
+![SVN Branching & Merging](/SVN-Hg-Demo/images/image8.png)
+![SVN Branching & Merging](/SVN-Hg-Demo/images/image9.png)
+
+### Essential SVN Commands
+
+| Command                        | Description                    |
+| ------------------------------ | ------------------------------ |
+| `svn checkout <repo-url>`      | Get a working copy             |
+| `svn commit -m "Message"`      | Save changes to the repository |
+| `svn merge <branch-url>`       | Merge branches                 |
+| `svn resolve --accept working` | Resolve conflicts              |
+
+---
+
+## Mercurial (Hg)
+
+_A Distributed Version Control System_
+
+### Key Features
+
+-   Distributed repositories
+-   Atomic commits
+-   Simple branching/merging
+
+---
+
+### Mercurial Command Workflow
+
+#### Step 1: Verify Installation
+
+```bash
+hg --version
+```
+
+![Mercurial Installation](/SVN-Hg-Demo/images/image10.png)
+
+#### Step 2: Initialize Repository & Commit
+
+```bash
+cd C:\Users\ajayr
+mkdir Raghav-Hg-Repo
+cd Raghav-Hg-Repo
+hg init
+echo "Mercurial demo by Raghav" > hg-file.txt
+hg add hg-file.txt
+hg commit -m "Raghav: First commit"
+```
+
+![Mercurial Commit](/SVN-Hg-Demo/images/image11.png)
+![Mercurial Commit](/SVN-Hg-Demo/images/image12.png)
+
+#### Step 3: Branching & Merging
+
+```bash
+# Create branch
+hg branch raghav-feature
+
+# Edit in branch
+echo "Branch changes by Raghav" >> hg-file.txt
+hg commit -m "Raghav: Branch commit"
+
+# Merge to default
+hg update default
+hg merge raghav-feature
+hg commit -m "Raghav: Merged branch"
+```
+
+![Mercurial Branching & Merging](/SVN-Hg-Demo/images/image13.png)
+![Mercurial Branching & Merging](/SVN-Hg-Demo/images/image14.png)
+![Mercurial Branching & Merging](/SVN-Hg-Demo/images/image15.png)
+
+### Essential Mercurial Commands
+
+| Command                  | Description                |
+| ------------------------ | -------------------------- |
+| `hg init`                | Initialize a repository    |
+| `hg commit -m "Message"` | Save changes locally       |
+| `hg merge <branch>`      | Merge branches             |
+| `hg resolve --mark`      | Mark conflicts as resolved |
+
+---
+
+## SVN vs. Mercurial: Quick Comparison
+
+| Feature      | SVN                    | Mercurial    |
+| ------------ | ---------------------- | ------------ |
+| Type         | Centralized            | Distributed  |
+| Offline Work | Limited                | Full support |
+| Branching    | Directory-based        | Lightweight  |
+| Performance  | Slower for large repos | Faster       |
+
+---
+
+## Best Practices
+
+-   Use **SVN** for centralized team workflows.
+-   Use **Mercurial** for distributed/offline work.
+-   Write clear commit messages (e.g., "Raghav: Fixed login bug").
+
+---
