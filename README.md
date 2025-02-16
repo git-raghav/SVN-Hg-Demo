@@ -47,7 +47,7 @@ _A Centralized Version Control System_
 svn --version
 ```
 
-![SVN Installation](/SVN-Hg-Demo/images/image1.png)
+![SVN Installation](https://raw.githubusercontent.com/git-raghav/SVN-Hg-Demo/main/images/image1.png)
 
 #### Step 2: Create Repository & Standard Structure
 
